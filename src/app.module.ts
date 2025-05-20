@@ -8,6 +8,8 @@ import { UsersModule } from './users/users.module';
 import { AuthController } from './auth/auth.controller';
 import { AuthService } from './auth/auth.service';
 import { AuthModule } from './auth/auth.module';
+import { ProductsModule } from './products/products.module';
+import { CategoryModule } from './category/category.module';
 
 
 @Module({
@@ -16,6 +18,8 @@ import { AuthModule } from './auth/auth.module';
     MongooseModule.forRoot(process.env.MONGO_URI!, mongooseOptions),
     UsersModule,
     AuthModule,
+    ProductsModule,
+    CategoryModule,
   ],
   controllers: [AppController],
   providers: [AppService],
